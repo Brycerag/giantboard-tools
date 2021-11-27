@@ -21,7 +21,9 @@ debian|ubuntu)
 		libssl-dev debootstrap \
 		qemu-user-static \
 		device-tree-compiler \
-		dosfstools
+		dosfstools \
+		libgmp3-dev \
+		libmpc-dev
 	;;
 fedora)
 	sudo dnf install -y \
@@ -35,4 +37,5 @@ fedora)
 		dosfstools
 	;;
 esac
+root update-binfmts --enable qemu-arm
 echo "done.."
