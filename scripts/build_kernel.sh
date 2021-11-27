@@ -8,6 +8,7 @@ modules_dir="${output_dir}/modules"
 headers_dir="${output_dir}/headers"
 build_dir="${output_dir}/build"
 linux_dir="${build_dir}/linux"
+uboot_dir="${build_dir}/u-boot"
 images_dir="${output_dir}/images"
 
 # core count for compiling with -j
@@ -92,5 +93,5 @@ echo "copying kernel files"
 
 # copy the kernel zImage and giantboard dtb to our images directory
 cp ${linux_dir}/arch/arm/boot/zImage ${images_dir}/
-cp ${linux_dir}/arch/arm/boot/dts/at91-sama5d27_giantboard.dtb ${images_dir}/
+cp ${uboot_dir}/arch/arm/dts/at91-sama5d27_giantboard.dtb ${images_dir}/
 echo "complete!"
